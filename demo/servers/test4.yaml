@@ -1,0 +1,24 @@
+sso:
+  name: uWSGI主机组
+  hosts:
+    - host: 192.168.1.44:22
+      alias: uWSGI-主
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.2.44
+      port: 9922
+      alias: uWSGI-从1
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.3.44:22
+      alias: uWSGI-从2
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic

@@ -1,0 +1,24 @@
+sso:
+  name: Nginx主机组
+  hosts:
+    - host: 192.168.1.22:22
+      alias: Nginx-主
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.2.22
+      port: 9922
+      alias: Nginx-从1
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.3.22:22
+      alias: Nginx-从2
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic

@@ -1,0 +1,24 @@
+sso:
+  name: Redis主机组
+  hosts:
+    - host: 192.168.1.33:22
+      alias: Redis-主
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.2.33
+      port: 9922
+      alias: Redis-从1
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.3.33:22
+      alias: Redis-从2
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic

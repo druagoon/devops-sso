@@ -1,0 +1,26 @@
+sso:
+  name: DNS主机组
+  hosts:
+    - host: 192.168.1.11:22
+      alias: DNS-主
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.2.11
+      port: 9922
+      alias: DNS-从1
+      protocol: ssh
+      users:
+        - user: root
+        - user: magic
+
+    - host: 192.168.3.11:22
+      alias: DNS-从2
+      protocol: ssh
+      users:
+        - user: root
+          alias: root别名
+          key: /root/.ssh/id_rsa
+        - user: magic
